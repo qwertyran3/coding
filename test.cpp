@@ -5,8 +5,10 @@ using namespace std;
 #define ll long long
 #define ini(arr, val) memset(arr, (val), sizeof(arr))
 #define loop(i,n)  for(ll i=0; i<n; i++)
+#define loop1(i,n)  for(ll i=1; i<=n; i++)
 
 #define all(a)      (a).begin(),(a).end()
+#define dupli(a)     unique(all(a)),(a).end()
 #define exist(s,e)  (s.find(e)!=s.end())
 #define dbg(x)  cout << #x << " is " << x << endl;
 #define pt(x) cout<<x<<"\n"
@@ -56,26 +58,16 @@ int main(){
     #ifndef ONLINE_JUDGE
     freopen("./input.txt", "r", stdin);
     freopen("./output.txt", "w", stdout);
-    #endif
+	#endif
     fast
 
-        int t, n, x, k;
-        cin>>t;
-        for(int i=0; i<t; i++)
-        {
-            cin>>n;
-            for(k=2; k<=35; k++)
-            {
-                int den=pow(2, k)-1;
-                if(n % den)
-                    continue;
-                x=n/den;
-                break;
-            }
-            cout<<x<<endl;  
-        }
-     
-        return 0;
-    }
-   
-   
+    
+
+}
+
+
+/*
+
+// 
+
+*/

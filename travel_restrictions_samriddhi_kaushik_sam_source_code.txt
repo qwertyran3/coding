@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+int s[100];
+void help(string in,string ou,int n,int k)
+{
+
+s[k]=1;    
+ if((k>0)&&ou[k]=='Y'&&in[k-1]=='Y'&&s[k-1]==0){
+    
+        help(in,ou,n,k-1);
+
+ }
+   if((k+1<n)&&ou[k]=='Y'&&in[k+1]=='Y'&&s[k+1]==0){
+    
+          help(in,ou,n,k+1);
+   }
+  
+}
+
+
+int main()
+{
+int t,x=0;cin>>t;
+while(t--){
+    x++;
+    int n;cin>>n;
+    string in,ou;
+    cin>>in>>ou;
+    cout<<"Case "<<'#'<<x<<':'<<endl;
+   for(int i=0;i<n;i++)
+   {
+    
+    memset(s,0,sizeof(s));
+    help(in,ou,n,i);
+    string an="";
+    for(int j=0;j<n;j++){
+        if(s[j]==0)
+            an+='N';
+        else
+            an+='Y';
+    }
+
+    cout<<an<<endl;
+
+}}return 0;}

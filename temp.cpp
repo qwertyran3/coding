@@ -5,12 +5,14 @@ using namespace std;
 #define ll long long
 #define ini(arr, val) memset(arr, (val), sizeof(arr))
 #define loop(i,n)  for(ll i=0; i<n; i++)
+#define loop1(i,n)  for(ll i=1; i<=n; i++)
 
 #define all(a)      (a).begin(),(a).end()
+#define dupli(a)     unique(all(a)),(a).end()
 #define exist(s,e)  (s.find(e)!=s.end())
 #define dbg(x)  cout << #x << " is " << x << endl;
-#define pt(x) cout<<x<<"\n";
-#define pts(x) cout<<x<<" ";
+#define pt(x) cout<<x<<"\n"
+#define pts(x) cout<<x<<" "
 
 #define mp make_pair
 #define pb push_back

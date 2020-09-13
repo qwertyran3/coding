@@ -1,0 +1,47 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+
+	freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+
+	int t;
+	cin>>t;
+	for(int test = 1; test<=t; test++)
+	{
+		int n;
+		cin>>n;
+
+		string color;
+		cin>>color;
+
+		map<char,int> mp;
+
+		for(int i = 0; i<n; i++)
+		{
+			if(color[i] == 'A')
+			{
+				mp['A']++;
+			}
+			else
+			{
+				mp['B']++;
+			}
+		}
+
+		int check = min(mp['A'], mp['B']);
+
+		if(check == n/2)
+		{
+			cout<<"Case #"<<test<<": "<<"Y"<<endl;
+		}
+		else
+		{
+			cout<<"Case #"<<test<<": "<<"N"<<endl;
+		}
+
+	}
+	return 0;
+}
