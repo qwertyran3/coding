@@ -5,10 +5,8 @@ using namespace std;
 #define ll long long
 #define ini(arr, val) memset(arr, (val), sizeof(arr))
 #define loop(i,n)  for(ll i=0; i<n; i++)
-#define loop1(i,n)  for(ll i=1; i<=n; i++)
 
 #define all(a)      (a).begin(),(a).end()
-#define dupli(a)     unique(all(a)),(a).end()
 #define exist(s,e)  (s.find(e)!=s.end())
 #define dbg(x)  cout << #x << " is " << x << endl;
 #define pt(x) cout<<x<<"\n"
@@ -56,12 +54,34 @@ int const lmt=1e5+5;
 int main(){
 
     #ifndef ONLINE_JUDGE
-    freopen("./input.txt", "r", stdin);
-    freopen("./output.txt", "w", stdout);
+    freopen("../../input.txt", "r", stdin);
+    freopen("../../output.txt", "w", stdout);
 	#endif
     fast
 
-    pt("rani");
+    test{
+	    int n,W;
+	    cin>>n>>W;
+	    int v[n],w[n];
+	    loop(i,n) cin>>v[i];
+	    loop(i,n) cin>>w[i];
+
+	    int dp[n+1][W+1];
+
+	    loop(i,n+1){
+	    	loop(j,W+1){
+	    		if(i==0 || j==0) dp[i][j]=0;
+	    		else if(w[i-1]>j) dp[i][j]=dp[i-1][j];
+	    		else dp[i][j]=max(dp[i-1][j],v[i-1]+dp[i-1][j-w[i-1]]);
+	    	}
+
+	    }
+	    pt(dp[n][W]);
+
+	}
+
+
+    
 
     
 

@@ -5,10 +5,8 @@ using namespace std;
 #define ll long long
 #define ini(arr, val) memset(arr, (val), sizeof(arr))
 #define loop(i,n)  for(ll i=0; i<n; i++)
-#define loop1(i,n)  for(ll i=1; i<=n; i++)
 
 #define all(a)      (a).begin(),(a).end()
-#define dupli(a)     unique(all(a)),(a).end()
 #define exist(s,e)  (s.find(e)!=s.end())
 #define dbg(x)  cout << #x << " is " << x << endl;
 #define pt(x) cout<<x<<"\n"
@@ -56,12 +54,28 @@ int const lmt=1e5+5;
 int main(){
 
     #ifndef ONLINE_JUDGE
-    freopen("./input.txt", "r", stdin);
-    freopen("./output.txt", "w", stdout);
+    freopen("../../input.txt", "r", stdin);
+    freopen("../../output.txt", "w", stdout);
 	#endif
     fast
 
-    pt("rani");
+    test{
+    	ll m,n;
+    	cin>>m>>n;
+    	string s,p;
+    	cin>>s>>p;
+    	int dp[m+1][n+1];
+    	loop(i,m+1){
+    		loop(j,n+1){
+    			if(i==0 || j==0) dp[i][j]=0;
+    			else if(s[i-1]==p[j-1]) dp[i][j]=dp[i-1][j-1]+1;
+    			else dp[i][j]=max(dp[i-1][j],dp[i][j-1]);
+    		}
+    	}
+    	pt(dp[m][n]);
+    }
+
+    
 
     
 

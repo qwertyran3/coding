@@ -8,6 +8,7 @@ using namespace std;
 #define loop1(i,n)  for(ll i=1; i<=n; i++)
 
 #define all(a)      (a).begin(),(a).end()
+#define tr(a)      (a).begin(),(a).end(),(a).begin()
 #define dupli(a)     unique(all(a)),(a).end()
 #define exist(s,e)  (s.find(e)!=s.end())
 #define dbg(x)  cout << #x << " is " << x << endl;
@@ -16,8 +17,8 @@ using namespace std;
 
 #define mp make_pair
 #define pb push_back
-#define f first
-#define s second
+#define F first
+#define S second
 
 
 #define inf (int)1e9
@@ -52,17 +53,26 @@ typedef set<ll> sl;
 int const lmt=1e5+5;
 
 
-
 int main(){
 
-    #ifndef ONLINE_JUDGE
-    freopen("./input.txt", "r", stdin);
-    freopen("./output.txt", "w", stdout);
+	#ifndef ONLINE_JUDGE
+    freopen("../input.txt", "r", stdin);
+    freopen("../output.txt", "w", stdout);
 	#endif
     fast
 
-    pt("rani");
+    test{
+    	cout<<"raniemgklh;o;yteryt"<<endl;
+        
+    }
+    
+    
+    
 
+    
+
+    
+    
     
 
 }
