@@ -61,23 +61,25 @@ int main(){
 	#endif
     fast
 
-    int n;
-    cin>>n;
-    int a[n];
-    loop(i,n) cin>>a[i];
-    int dp[n],ans=0;
-    dp[0]=a[0];
-    loop1(i,n-1){
-    	dp[i]=a[i];
-    	loop(j,i){
-    		if(a[j]<a[i] && dp[i]<dp[j]+a[i]){
-    			dp[i]=dp[j]+a[i];
-    		}
+    // int n;
+    // cin>>n;
+    // int a[n];
+    // loop(i,n) cin>>a[i];
+    // int dp[n],ans=0;
+    // dp[0]=a[0];
+    // loop1(i,n-1){
+    // 	dp[i]=a[i];
+    // 	loop(j,i){
+    // 		if(a[j]<a[i] && dp[i]<dp[j]+a[i]){
+    // 			dp[i]=dp[j]+a[i];
+    // 		}
     		
-    	}
-    	ans=max(ans,dp[i]);
-    }
-    pt(ans);
+    // 	}
+    // 	ans=max(ans,dp[i]);
+    // }
+    // pt(ans);
+
+    pt("rani");
     
 
     

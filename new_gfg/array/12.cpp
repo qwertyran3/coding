@@ -7,8 +7,8 @@ using namespace std;
 #define loop(i,n)  for(ll i=0; i<n; i++)
 #define loop1(i,n)  for(ll i=1; i<=n; i++)
 
+
 #define all(a)      (a).begin(),(a).end()
-#define dupli(a)     unique(all(a)),(a).end()
 #define exist(s,e)  (s.find(e)!=s.end())
 #define dbg(x)  cout << #x << " is " << x << endl;
 #define pt(x) cout<<x<<"\n"
@@ -56,13 +56,34 @@ int const lmt=1e5+5;
 int main(){
 
     #ifndef ONLINE_JUDGE
-    freopen("./input.txt", "r", stdin);
-    freopen("./output.txt", "w", stdout);
+    freopen("../../input.txt", "r", stdin);
+    freopen("../../output.txt", "w", stdout);
 	#endif
     fast
 
-    pt("rani");
+    test{
+    	int n; cin>>n;
+    	int a[n],d[n];
+    	loop(i,n) cin>>a[i];
+    	loop(i,n) cin>>d[i];
+    	sort(a,a+n);
+    	sort(d,d+n);
+    	int ans=0,i=1,j=0,p=1;
+    	while(i<n && j<n){
+    		if(a[i]<=d[j]){
+    			p++; i++;
+    		}
+    		else if(a[i]>d[j]){
+    			p--; j++;
+    		}
+    		ans=max(ans,p);
+    	} 
+    	pt(ans);
+    }
 
+    
+
+    
 
     
 
